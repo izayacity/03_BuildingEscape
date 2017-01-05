@@ -21,11 +21,14 @@ void UOpenDoor::BeginPlay()
 	Super::BeginPlay();
 
 	// Find the owning Actor
+	AActor* Owner = GetOwner ();
 
 	// Create a rotation
+	FRotator NewRotation = FRotator (0.f, -60.f, 0.f);
+	// Pitch, YAW and Roll
 
 	// Set the door rotation
-	
+	Owner->SetActorRotation (NewRotation);
 }
 
 
