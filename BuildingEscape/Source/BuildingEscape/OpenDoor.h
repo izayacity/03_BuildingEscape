@@ -21,6 +21,11 @@ public:
 	// Called every frame
 	virtual void TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction ) override;
 
-		
-	
+private:
+	// Indicates that this property is visable in property windows, but cannot be edited at all.
+	// This operator is incompatible with the Edit* specifiers.
+	UPROPERTY(VisibleAnywhere)
+		float OpenAngle = 90.f;
+	UPROPERTY(EditAnywhere)
+		ATriggerVolume* PressurePlate;
 };
